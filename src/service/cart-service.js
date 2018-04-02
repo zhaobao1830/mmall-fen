@@ -10,3 +10,5 @@ var _cart ={
     });
   },
 }
+
+module.exports = _cart;

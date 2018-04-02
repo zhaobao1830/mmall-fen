@@ -23,4 +23,4 @@ var _user = {
     });
   }
 }
-exports.module = _user;
+module.exports = _user;
