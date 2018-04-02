@@ -21,6 +21,6 @@ var _user = {
       success : resolve,
       error   : reject
     });
-  },
+  }
 }
 exports.module = _user;
