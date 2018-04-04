@@ -21,6 +21,7 @@ var getHtmlConfig = function(name, title){
         inject      : true,
         hash        : true,
         // 打包的时候，允许被注入的js文件，这个项目是common里的index.js
+        // name也是打包时候注入的js文件，根据传入的不同值，传入不同的js（这个js是entry里面传入后打包的js文件）
         chunks      : ['common', name]
     };
 };
@@ -36,6 +37,7 @@ var config = {
     entry: {
         'common'            : './src/page/common/index.js',
         'index'             : './src/page/index/index.js',
+        'result'            : './src/page/result/index.js'
       // 'list'              : './src/page/list/index.js',
       // 'detail'            : './src/page/detail/index.js',
       // 'cart'              : './src/page/cart/index.js',
@@ -49,7 +51,6 @@ var config = {
       // 'user-center'       : './src/page/user-center/index.js',
       // 'user-center-update': './src/page/user-center-update/index.js',
       // 'user-pass-update'  : './src/page/user-pass-update/index.js',
-      // 'result'            : './src/page/result/index.js',
       // 'about'             : './src/page/about/index.js',
     },
     output: {
@@ -168,7 +169,8 @@ var config = {
         // 把css单独打包到文件里
         new ExtractTextPlugin("css/[name].css"),
         // html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index', '首页'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ],
     /*
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
