@@ -37,7 +37,7 @@ var config = {
     entry: {
         'common'            : './src/page/common/index.js',
         'index'             : './src/page/index/index.js',
-        'result'            : './src/page/result/index.js'
+        'result'            : './src/page/result/index.js',
       // 'list'              : './src/page/list/index.js',
       // 'detail'            : './src/page/detail/index.js',
       // 'cart'              : './src/page/cart/index.js',
@@ -45,7 +45,7 @@ var config = {
       // 'order-list'        : './src/page/order-list/index.js',
       // 'order-detail'      : './src/page/order-detail/index.js',
       // 'payment'           : './src/page/payment/index.js',
-      // 'user-login'        : './src/page/user-login/index.js',
+      'user-login'        : './src/page/user-login/index.js'
       // 'user-register'     : './src/page/user-register/index.js',
       // 'user-pass-reset'   : './src/page/user-pass-reset/index.js',
       // 'user-center'       : './src/page/user-center/index.js',
@@ -171,6 +171,7 @@ var config = {
         // html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录'))
     ],
     /*
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口

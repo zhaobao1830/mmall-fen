@@ -73,7 +73,7 @@ var _mm = {
   // 统一登录处理
   doLoin : function () {
     // encodeURIComponent如果有特殊字符串，可能会被截断，所以用encodeURIComponent进行编码
-    window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+    window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
   }
 };
 
