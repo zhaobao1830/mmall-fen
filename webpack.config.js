@@ -182,7 +182,7 @@ var config = {
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
     */
     devServer: {
-        port: 8088,
+        port: 8089,
         inline: true,
         proxy : {
             '**/*.do' : {
