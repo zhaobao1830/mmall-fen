@@ -40,7 +40,7 @@ var config = {
         'result'            : './src/page/result/index.js',
       // 'list'              : './src/page/list/index.js',
       // 'detail'            : './src/page/detail/index.js',
-      // 'cart'              : './src/page/cart/index.js',
+      'cart'              : './src/page/cart/index.js',
       // 'order-confirm'     : './src/page/order-confirm/index.js',
       // 'order-list'        : './src/page/order-list/index.js',
       // 'order-detail'      : './src/page/order-detail/index.js',
@@ -177,6 +177,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
     ],
     /*
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
